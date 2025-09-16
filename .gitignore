@@ -1,0 +1,6 @@
+logs/
+venv/
+.env
+Study_Buddy.egg-info/
+results/
+FULL_DOCUMENTATION.md
