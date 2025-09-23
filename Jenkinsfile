@@ -34,7 +34,7 @@ pipeline {
             steps {
                 script {
                     sh """
-                    sed -i 's|image: dataguru97/studybuddy:.*|image: dataguru97/studybuddy:${IMAGE_TAG}|' manifests/deployment.yaml
+                    sed -i 's|image: franklinkan/studybuddy:.*|image: franklinkan/studybuddy:${IMAGE_TAG}|' manifests/deployment.yaml
                     """
                 }
             }
@@ -45,11 +45,11 @@ pipeline {
                 script {
                     withCredentials([usernamePassword(credentialsId: 'github-token', usernameVariable: 'GIT_USER', passwordVariable: 'GIT_PASS')]) {
                         sh '''
-                        git config user.name "data-guru0"
-                        git config user.email "gyrogodnon@gmail.com"
+                        git config user.name "YunfeiKan"
+                        git config user.email "kanyunfei1201@gmail.com"
                         git add manifests/deployment.yaml
                         git commit -m "Update image tag to ${IMAGE_TAG}" || echo "No changes to commit"
-                        git push https://${GIT_USER}:${GIT_PASS}@github.com/data-guru0/STUDY-BUDDY-AI.git HEAD:main
+                        git push https://${GIT_USER}:${GIT_PASS}@github.com/YunfeiKan/Personal-Project-Study-Buddy-AI.git HEAD:main
                         '''
                     }
                 }
