@@ -21,7 +21,7 @@ def main():
         st.session_state.rerun_trigger = False
     
 
-    st.title("Study Buddy Quiz Generator AI")
+    st.title("Study Buddy Quiz Generator AI (NEW)")
 
     st.sidebar.header("Quiz Settings")
 
